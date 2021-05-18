@@ -52,7 +52,7 @@
         <joint name="${robot_prefix}_gripper_left_base_joint" type="revolute">
             <parent link="${robot_prefix}_gripper_link"/>
             <child link="${robot_prefix}_gripper_left_base_link"/>
-            <origin xyz="0 0.025 0.0195" rpy="${PI / 2} 0 ${PI / 2}"/>
+            <origin xyz="0 0.025 0.0195" rpy="${(PI / 2)} -0.5 ${PI / 2}"/>
             <axis xyz="0 0 1"/>
             <limit lower="${-PI / 2}" upper="${PI / 2}"
                    effort="${max_effort}" velocity="${max_velocity}" />
@@ -95,7 +95,7 @@
         <joint name="${robot_prefix}_gripper_left_finger_joint" type="revolute">
             <parent link="${robot_prefix}_gripper_left_base_link"/>
             <child link="${robot_prefix}_gripper_left_finger_link"/>
-            <origin xyz="0 0.04 0" rpy="0 0 0"/>
+            <origin xyz="0 0.04 0" rpy="0 0 -0.5"/>
             <axis xyz="0 0 1"/>
             <limit lower="${-PI / 2}" upper="${PI / 2}"
                    effort="${max_effort}" velocity="${max_velocity}" />
@@ -136,7 +136,7 @@
         <joint name="${robot_prefix}_gripper_right_base_joint" type="revolute">
             <parent link="${robot_prefix}_gripper_link"/>
             <child link="${robot_prefix}_gripper_right_base_link"/>
-            <origin xyz="0 -0.025 0.0195" rpy="${PI / 2} 0 -${PI / 2}"/>
+            <origin xyz="0 -0.025 0.0195" rpy="${PI / 2} -0.5 -${PI / 2}"/>
             <axis xyz="0 0 1"/>
             <limit lower="${-PI / 2}" upper="${PI / 2}"
                    effort="${max_effort}" velocity="${max_velocity}" />
@@ -179,7 +179,7 @@
         <joint name="${robot_prefix}_gripper_right_finger_joint" type="revolute">
             <parent link="${robot_prefix}_gripper_right_base_link"/>
             <child link="${robot_prefix}_gripper_right_finger_link"/>
-            <origin xyz="0 0.04 0" rpy="0 0 0"/>
+            <origin xyz="0 0.04 0" rpy="0 0 -0.5"/>
             <axis xyz="0 0 1"/>
             <limit lower="${-PI / 2}" upper="${PI / 2}"
                    effort="${max_effort}" velocity="${max_velocity}" />
